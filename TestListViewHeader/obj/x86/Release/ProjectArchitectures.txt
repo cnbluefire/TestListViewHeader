@@ -1,0 +1,1 @@
+C:\Users\blue-\Documents\Visual Studio 2017\Projects\TestListViewHeader\TestListViewHeader\TestListViewHeader.csproj;x86
