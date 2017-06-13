@@ -74,6 +74,19 @@ namespace TestListViewHeader
 
             return null;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var rootFrame = Window.Current.Content as SwipeBack.MainFrame;
+            rootFrame.ShowText("显示Toast");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var rootFrame = Window.Current.Content as SwipeBack.MainFrame;
+            rootFrame.ToastHyperLinkClicked += (s,a) => rootFrame.ShowText("点击了Toast中的超链接按钮");
+            rootFrame.ShowTextHyperText("显示Toast", "超链接按钮");
+        }
     }
 }
 
