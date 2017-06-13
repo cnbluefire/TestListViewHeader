@@ -74,7 +74,8 @@ namespace TestListViewHeader
                 _headerVisual.StartAnimation("Offset.Y", MoveHeaderAnimation);
                 Betch.Completed += (s, a) =>
                 {
-                    var _headerAnimation = _compositor.CreateExpressionAnimation("_manipulationPropertySet.Translation.Y > -100f ? (_manipulationPropertySet.Translation.Y == 0?This.CurrentValue :_manipulationPropertySet.Translation.Y) : -100f");
+                    //var _headerAnimation = _compositor.CreateExpressionAnimation("_manipulationPropertySet.Translation.Y > -100f ? (_manipulationPropertySet.Translation.Y == 0?This.CurrentValue :_manipulationPropertySet.Translation.Y) : -100f");
+                    var _headerAnimation = _compositor.CreateExpressionAnimation("Clamp(_manipulationPropertySet.Translation.Y,-100f,_manipulationPropertySet.Translation.Y == 0?This.CurrentValue : 0f)");
                     //_manipulationPropertySet.Translation.Y是ScrollViewer滚动的数值，手指向上移动的时候，也就是可视部分向下移动的时候，Translation.Y是负数。
 
                     _headerAnimation.SetReferenceParameter("_manipulationPropertySet", _manipulationPropertySet);

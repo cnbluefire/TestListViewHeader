@@ -9,8 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button FontSize="25" Click="Button_Click">Test1</Button>
-            <Button FontSize="25" Click="Button_Click_1">Test2</Button>
+            <Button FontSize="25" Click="Button_Click">无Pivot</Button>
+            <Button FontSize="25" Click="Button_Click_1">有Pivot</Button>
         </StackPanel>
     </Grid>
 </Page>
